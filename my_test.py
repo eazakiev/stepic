@@ -1,21 +1,27 @@
-def sum_divisors(number):
-    summa = 0
-    for digit in range(1, number + 1):
-        if number % digit == 0:
-            summa += digit
-    return summa
+def number_to_words(num):
+    if num // 10 == 0:
+        return search(num)
+    print((num // 10) * 10)
+    print(num % 10)
+    # return search((num // 10) * 10), search(num % 10)
 
 
-def sum_numbers(num):
-    total = 0
-    for digit in range(1, num + 1):
-        if digit % 2 == 0:
-            total -= digit
-        else:
-            total += digit
 
-    return total
+def search(n):
+    numbers = {1: 'один', 2: 'два', 3: 'три', 4: 'четыре', 5: 'пять', 6: 'шесть',
+               7: 'семь', 8: 'восемь', 9: 'девять', 10: 'десять', 11: 'одиннадцать',
+               12: 'двенадцать', 13: 'тринадцать', 14: 'четырнадцать',
+               15: 'пятнадцать', 16: 'шестнадцать',17: 'семнадцать', 18: 'восемнадцать',
+               19: 'девятнадцать', 20: 'двадцать', 30: 'тридцать', 40: 'сорок',
+               50: 'пятьдесят', 60: 'шестьдесят', 70: 'семьдесят',
+               80: 'восемьдесят', 90: 'девяносто'}
+    return numbers[n]
 
+
+
+
+number = int(input())
+print(number_to_words(number))
 
 
 
